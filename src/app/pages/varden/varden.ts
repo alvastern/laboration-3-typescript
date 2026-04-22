@@ -1,30 +1,28 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-varden',
-  imports: [],
+  imports: [CommonModule, FormsModule],
   templateUrl: './varden.html',
   styleUrl: './varden.scss',
 })
-export class Varden {}
 
-// Räkna ut fot till meter
-const userNumber = "text";
+export class Varden {
+  cm: number = 0;
+  fot: number = 0;
 
-const formFot = document.getElementById("formFot") as HTMLElement;
-const inputMeter = document.getElementById("inputNumberMeter") as HTMLInputElement;
+  celcius: number = 0;
+  farenheit: number = 0;
 
-function cmToFot(cm: number): number {
-  return cm / 30.48;
+  cmToFot(e: Event) {
+    e.preventDefault();
+    this.fot = this.cm / 30.48;
+  }
+
+   celciusToFarenheit(e: Event) {
+    e.preventDefault();
+    this.farenheit = (this.celcius * 9/5) + 32;
+   }
 }
-
-formFot.addEventListener("submit", (e) => {
-  e.preventDefault();
-
-  const cm = Number(inputMeter.value);
-  const fot = cmToFot(cm);
-});
-
-// Räkna ut celcius till farenheit
-const formCelcius = document.getElementById("formCelcius") as HTMLElement;
-const inputCelcius = document.getElementById("inputNumberCelcius") as HTMLInputElement;
