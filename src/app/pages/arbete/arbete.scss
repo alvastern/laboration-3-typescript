@@ -9,7 +9,20 @@ h3 {
 }
 
 p {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     margin: 0 0 10vh 5vw;
     width: 60ch;
+}
+
+@media (max-width: 1024px) {
+    h2, h3 {
+        text-align: center;
+        margin: 5vh auto 2vh auto;
+    }
+
+    p {
+        text-align: center;
+        margin: 0 auto 5vh auto;
+        width: 80vw;
+    }
 }

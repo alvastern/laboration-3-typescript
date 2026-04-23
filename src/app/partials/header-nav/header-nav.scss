@@ -21,7 +21,7 @@ header {
     display: flex;
     list-style-type: none;
     padding: 0;
-    gap: 150px;
+    gap: 2.5vw;
 
     li a {
         color: white;
@@ -47,4 +47,33 @@ h1 {
     padding: 2vh 3vw;
     border-radius: 3rem;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 1024px) {
+    #nav-list  {
+        flex-direction: column;
+        gap: 5vh;
+    }
+
+    #nav-list li {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    #nav-list li a {
+        width: 80vw;
+        display: block;
+        text-align: center;
+        border-radius: 0.5rem;
+    }
+
+    #header-sektion {
+        flex-direction: column;
+    }
+
+    h1 {
+        width: 80vw;
+        text-align: center;
+    }
 }

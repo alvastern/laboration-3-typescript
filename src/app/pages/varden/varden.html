@@ -3,23 +3,23 @@
         <h2>Konventera från centimeter till fot</h2>
 
         <form (submit)="cmToFot($event)" id="formFot">
-            <label for="inputNumberMeter">Antal centimeter:</label>
-            <input type="number" [(ngModel)]="cm" name="cm" placeholder="Skriv in ett nummer">
+            <label for="inputNumberMeter">Antal centimeter: </label>
+            <input type="number" [(ngModel)]="cm" name="cm" placeholder="Skriv in ett nummer" id="inputFot">
             <button type="submit" id="submitFot">Räkna ut</button>
         </form>
 
-        <p *ngIf="fot">Fot: {{ fot }}</p>
+        <p *ngIf="fot" id="resultatFot">Fot: {{ fot }}</p>
     </section>
 
     <section>
         <h2>Konventera från celcius till farenheit</h2>
 
-        <form (submit)="celciusToFarenheit($event)" id="formCelcius">
-            <label for="inputNumberCelcius">Grader i celcius:</label>
-            <input type="number" [(ngModel)]="celcius" name="celcius" placeholder="Skriv in ett nummer">
+        <form (submit)="celciusToFarenheit($event)" id="formCelcius" id="formCelcius">
+            <label for="inputNumberCelcius">Grader i celcius: </label>
+            <input type="number" [(ngModel)]="celcius" name="celcius" placeholder="Skriv in ett nummer" id="inputCelcius">
             <button type="submit" id="submitCelcius">Räkna ut</button>
         </form>
 
-        <p *ngIf="farenheit">Farenheit: {{ farenheit }}</p>
+        <p *ngIf="farenheit" id="resultatCelcius">Farenheit: {{ farenheit }}</p>
     </section>
 </main>
