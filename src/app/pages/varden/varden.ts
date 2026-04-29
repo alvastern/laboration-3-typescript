@@ -10,19 +10,29 @@ import { FormsModule } from '@angular/forms';
 })
 
 export class Varden {
-  cm: number = 0;
+  meter: number = 0;
   fot: number = 0;
 
   celcius: number = 0;
   farenheit: number = 0;
 
-  cmToFot(e: Event) {
+  meterToFot(e: Event) {
     e.preventDefault();
-    this.fot = this.cm / 30.48;
+    this.fot = this.meter * 3.28084;
+  }
+
+  fotToMeter(e: Event) {
+    e.preventDefault();
+    this.meter = this.fot / 3.28084;
   }
 
    celciusToFarenheit(e: Event) {
     e.preventDefault();
     this.farenheit = (this.celcius * 9/5) + 32;
+   }
+
+   FarenheitToCelcius(e: Event) {
+    e.preventDefault();
+    this.celcius = (this.farenheit - 32) * 5/9;
    }
 }

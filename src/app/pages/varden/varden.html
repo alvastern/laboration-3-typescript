@@ -1,25 +1,51 @@
 <main>
     <section>
-        <h2>Konventera från centimeter till fot</h2>
+        <article>
+            <h2>Konventera från meter till fot</h2>
 
-        <form (submit)="cmToFot($event)" id="formFot">
-            <label for="inputNumberMeter">Antal centimeter: </label>
-            <input type="number" [(ngModel)]="cm" name="cm" placeholder="Skriv in ett nummer" id="inputFot">
-            <button type="submit" id="submitFot">Räkna ut</button>
-        </form>
+            <form (submit)="meterToFot($event)" class="formFot">
+                <label for="inputNumberMeter">Antal meter: </label>
+                <input type="number" [(ngModel)]="meter" name="meter" placeholder="Skriv in ett nummer" class="inputFot">
+                <button type="submit" class="submitFot">Räkna ut</button>
+            </form>
 
-        <p *ngIf="fot" id="resultatFot">Fot: {{ fot }}</p>
+            <p *ngIf="fot" id="resultatFot">Fot: {{ fot }}</p>
+        </article>
+
+        <article>
+            <h2>Konventera från fot till meter</h2>
+
+            <form (submit)="fotToMeter($event)" class="formFot">
+                <label for="inputNumberFot">Antal fot: </label>
+                <input type="number" [(ngModel)]="fot" name="fot" placeholder="Skriv in ett nummer" class="inputFot">
+                <button type="submit" class="submitMeter">Räkna ut</button>
+            </form>
+        </article>
     </section>
 
     <section>
-        <h2>Konventera från celcius till farenheit</h2>
+        <article>
+            <h2>Konventera från celcius till farenheit</h2>
 
-        <form (submit)="celciusToFarenheit($event)" id="formCelcius" id="formCelcius">
-            <label for="inputNumberCelcius">Grader i celcius: </label>
-            <input type="number" [(ngModel)]="celcius" name="celcius" placeholder="Skriv in ett nummer" id="inputCelcius">
-            <button type="submit" id="submitCelcius">Räkna ut</button>
-        </form>
+            <form (submit)="celciusToFarenheit($event)" class="formCelcius">
+                <label for="inputNumberCelcius">Grader i celcius: </label>
+                <input type="number" [(ngModel)]="celcius" name="celcius" placeholder="Skriv in ett nummer" class="inputCelcius">
+                <button type="submit" class="submitCelcius">Räkna ut</button>
+            </form>
 
-        <p *ngIf="farenheit" id="resultatCelcius">Farenheit: {{ farenheit }}</p>
+            <p *ngIf="farenheit" id="resultatCelcius">Farenheit: {{ farenheit }}</p>
+        </article>
+
+        <article>
+            <h2>Konventera från farenheit till celcius</h2>
+
+            <form (submit)="FarenheitToCelcius($event)" class="formCelcius">
+                <label for="inputNumberFarenheit">Grader i farenheit: </label>
+                <input type="number" [(ngModel)]="farenheit" name="farenheit" placeholder="Skriv in ett nummer" class="inputCelcius">
+                <button type="submit" class="submitFarenheit">Räkna ut</button>
+            </form>
+
+            <p *ngIf="celcius" id="resultatFarenheit">Celcius: {{ celcius }}</p>
+        </article>
     </section>
 </main>
