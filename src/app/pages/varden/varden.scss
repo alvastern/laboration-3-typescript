@@ -9,20 +9,20 @@ h2 {
     font-size: 1.25rem;
 }
 
-.inputFot, .inputCelcius {
+.input {
     border: none;
     padding: 0.5rem 1rem;
     border-radius: 1.5rem;
     font-size: 1.25rem;
 }
 
-.resultatFot, .resultatCelcius {
+.resultat {
     margin: 2.5vh 0 5vh 5vw;
     font-size: 1.25rem;
     font-weight: bold;
 }
 
-.submitFot, .submitCelcius, .submitMeter, .submitFarenheit {
+.submit {
     margin: 0 0 0 2.5vw;
     padding: 1rem 1.5rem;
     border: none;
@@ -33,7 +33,7 @@ h2 {
     color: white;
 }
 
-.submitFot:hover, .submitCelcius:hover, .submitMeter:hover, .submitFarenheit:hover {
+.submit:hover {
     background-color: white;
     cursor: pointer;
     color: black;
@@ -46,7 +46,7 @@ h2 {
         text-align: center;
     }
 
-    .formFot, .formCelcius {
+    .formFot {
         margin: 0 auto 4vh auto;
         width: 80vw;
         display: flex;
@@ -56,7 +56,7 @@ h2 {
         text-align: center;
     }
 
-    .inputFot, .inputCelcius {
+    .input {
         width: 100%;
         font-size: 1.1rem;
         padding: 0.75rem 1rem;
@@ -69,7 +69,7 @@ h2 {
         padding: 0.75rem;
     }
 
-    .resultatFot, .resultatCelcius {
+    .resultat {
         margin: 2vh auto 4vh auto;
         width: 80vw;
         text-align: center;
